@@ -120,12 +120,10 @@ export const handleUserDetails=async(req,res)=>{
                 }
                 recentChats.sort(sortByLastMessageTimeStamp);
             }
-            if(userData && recentChats){
-                const result = {message:userData,recentChats};
-                setCacheData(redisKey,result);
-            }
-
-            return res.status(200).json(JSON.stringify(result));
+            
+            const result = {message:userData,recentChats};
+            setCacheData(redisKey,result);
+            return res.status(200).json(result);
         }else{
             return res.status(200).json(cacheResult);
         }
