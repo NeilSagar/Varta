@@ -123,6 +123,7 @@ export const handleUserDetails=async(req,res)=>{
             
             const result = {message:userData,recentChats};
             setCacheData(redisKey,result);
+            
             return res.status(200).json(result);
         }else{
             return res.status(200).json(cacheResult);
