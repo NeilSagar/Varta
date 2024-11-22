@@ -4,7 +4,7 @@ import { UserDetails } from '../context/UserContext';
 import Contact_x_Chat_card from './Contact_x_Chat_card';
 
 export default function Contacts({setSideBarMainScreen}) {
-  const {user,} = UserDetails();
+  const {user} = UserDetails();
 
   function handleClick(){
     setSideBarMainScreen("chats");
