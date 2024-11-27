@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import AttachmentIcon from '@mui/icons-material/Attachment';
 import SendIcon from '@mui/icons-material/Send';
 import { UserDetails } from '../context/UserContext';
+
+
 export default function ChatSend({setChats,socket}) {
   const {user,chatDetails,chatWithId,updateChat,setRecentChats,setChatDetails} = UserDetails();
   const [message,setMessage] = useState("");

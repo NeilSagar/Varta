@@ -75,6 +75,7 @@ export default function Profile(props) {
       fetchSearchedDetails(props.UserName);
     }
   },[]);
+  
   return (
     <div className='w-full flex flex-col'>
     <div className='flex flex-col items-center justify-center w-full flex-grow'>

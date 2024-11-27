@@ -7,7 +7,7 @@ export default function ContactSearchbar({setSideBarMainScreen}) {
   const [searchedUser, setSearchedUser] = useState("");
   function handleSearchingContacts(e){
     if(e.key === "Enter"){
-      
+      //need to implement
     }
   }
   function handleClick(){
