@@ -1,7 +1,6 @@
-// redisCache.js
 import { client } from '../connection/connectRedis.js';
 
-// Cache data to Redis with optional expiry time (default: 1 hour)
+
 const setCacheData = async (key, data, expiry = 10) => {
   try {
     await client.setEx(key, expiry, JSON.stringify(data));
@@ -11,7 +10,7 @@ const setCacheData = async (key, data, expiry = 10) => {
   }
 };
 
-// Fetch cached data from Redis
+
 const getCacheData = async (key) => {
   try {
     const data = await client.get(key);
@@ -34,5 +33,5 @@ const deleteCachedKey = async (key) => {
   }
 }
 
-// Exporting cache functions
+
 export { setCacheData, getCacheData, deleteCachedKey };
